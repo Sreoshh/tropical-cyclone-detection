@@ -60,3 +60,25 @@
 - Raw NetCDF files and processed CSV datasets remain local and are excluded from Git.
 - Wind-speed and pressure units still require verification.
 - Comparative cyclone analysis and further validation are pending.
+
+
+
+## [v0.2.1] — Phase 2: Comparative Cyclone Analysis
+
+### Added
+- Compared wind-speed variation between MEGH and CHAPALA.
+- Analysed central-pressure variations across both cyclones.
+- Visualised and compared cyclone tracks using HURSAT centre coordinates.
+- Added starting and ending position markers to cyclone track visualisations.
+- Calculated minimum, maximum, and average wind speed and central pressure.
+- Validated matching MET-7 and MSG-3 satellite observations.
+
+### Findings
+- CHAPALA recorded a maximum wind speed of 112.5 knots.
+- MEGH recorded a maximum wind speed of 95.9 knots.
+- CHAPALA reached a minimum central pressure of 934.5 mb, compared with MEGH's 952.5 mb.
+
+### Notes
+- Comparative analysis uses 110 unique timestamps from 220 original satellite records.
+- Original satellite records have been preserved.
+- ARCHER score analysis and further validation remain pending.
