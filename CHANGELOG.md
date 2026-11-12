@@ -43,3 +43,20 @@
 - Satellite gallery images are for preliminary visual exploration only.
 - Geographic verification against the historical cyclone track remains incomplete.
 - Scientific satellite data acquisition and model training are deferred to later work.
+
+
+
+
+## [v0.2.0] — Phase 2: HURSAT Dataset Inspection
+
+### Added
+- Inspected and extracted metadata from the HURSAT-B1 MEGH dataset (98 observations).
+- Inspected and extracted metadata from the HURSAT-B1 CHAPALA dataset (122 observations).
+- Saved both cyclone metadata tables as CSV files in `data/processed/`.
+- Extracted storm-centre coordinates, wind speed, central pressure, and ARCHER measurements.
+
+### Notes
+- A total of 220 cyclone observations have been extracted.
+- Raw NetCDF files and processed CSV datasets remain local and are excluded from Git.
+- Wind-speed and pressure units still require verification.
+- Comparative cyclone analysis and further validation are pending.
