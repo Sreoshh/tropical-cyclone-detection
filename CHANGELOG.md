@@ -82,3 +82,27 @@
 - Comparative analysis uses 110 unique timestamps from 220 original satellite records.
 - Original satellite records have been preserved.
 - ARCHER score analysis and further validation remain pending.
+
+
+
+## [v0.2.2] — Phase 2: ARCHER Score Analysis
+
+### Added
+- Extracted and inspected ARCHER Combo Score and Ring Score metadata.
+- Calculated derived Spiral Scores using the documented difference between Combo and Ring Scores.
+- Generated time-series visualisations for all three ARCHER scores.
+- Calculated descriptive statistics for ARCHER measurements.
+- Analysed Pearson and Spearman correlations between ARCHER scores, wind speed, and central pressure.
+- Compared ARCHER score behaviour between MEGH and CHAPALA.
+
+### Findings
+- CHAPALA exhibited a stronger association between Ring Score and intensity measurements than MEGH.
+- MEGH recorded a higher average Combo Score and Spiral Score.
+- CHAPALA recorded a higher average Ring Score and greater Spiral Score variation.
+
+### Notes
+- ARCHER scores are dimensionless storm-centre determination measurements.
+- Spiral Score is derived as Combo Score minus Ring Score.
+- Correlation findings describe associations within the selected observations and do not establish predictive capability.
+- Raw NetCDF files and processed CSV datasets remain excluded from Git.
+- Further validation and model development remain pending.
