@@ -106,3 +106,16 @@
 - Correlation findings describe associations within the selected observations and do not establish predictive capability.
 - Raw NetCDF files and processed CSV datasets remain excluded from Git.
 - Further validation and model development remain pending.
+
+
+
+
+### v0.3.0 —  Phase 2: Dataset Preparation 
+
+**Added**
+- Extracted IRWIN, IRWVP, and VSCHN satellite channels from MEGH and CHAPALA HURSAT observations.
+- Created training (39), validation (10), and testing (61) dataset splits.
+- Verified all 110 extracted images for channel availability and dimensions (301 × 301).
+- Generated an image metadata manifest containing storm information, wind speed, central pressure, and ARCHER scores.
+- Added provisional cyclone intensity labels based on wind-speed ranges.
+- Analysed wind-speed distributions across dataset splits.
