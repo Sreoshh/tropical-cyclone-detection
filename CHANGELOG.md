@@ -119,3 +119,51 @@
 - Generated an image metadata manifest containing storm information, wind speed, central pressure, and ARCHER scores.
 - Added provisional cyclone intensity labels based on wind-speed ranges.
 - Analysed wind-speed distributions across dataset splits.
+
+
+
+
+### v0.3.1 — Dataset Preparation and Image-Level Labelling (Phase 3)
+
+**Added**
+- Extracted IRWIN, IRWVP, and VSCHN satellite channels from HURSAT NetCDF observations.
+- Created storm-level training, validation, and testing splits:
+  - Training: 39 MEGH observations.
+  - Validation: 10 MEGH observations.
+  - Testing: 61 CHAPALA observations.
+- Converted raw satellite values into physical measurements using channel-specific scale factors and offsets.
+- Calculated training-set channel statistics and established 1st–99th percentile normalization limits.
+- Applied consistent normalization across all three dataset splits, scaling valid pixel values to [0, 1].
+- Preserved missing pixels as NaN during normalization.
+- Generated and verified 110 normalized satellite images.
+- Combined the three satellite channels into multi-channel images of shape 301 × 301 × 3.
+- Generated and verified the stacked image dataset.
+- Created an image-to-label mapping containing storm metadata, observation timestamps, geographic coordinates, wind speed, central pressure, and provisional intensity labels.
+- Verified image-to-label correspondence across all 110 observations.
+
+**Notes**
+- Retained continuous wind-speed measurements alongside provisional intensity categories.
+- Used MEGH for training and validation and CHAPALA as an unseen storm-level test set.
+- Preserved original extracted satellite data separately from normalized and stacked images.
+- Dataset contains observations from only two cyclones; broader generalization requires additional storm datasets.
+
+Current dataset
+
+data/
+├── processed/
+│   └── cyclone_dataset/
+│       ├── train/
+│       │   └── MEGH/             # 39 extracted images
+│       ├── validation/
+│       │   └── MEGH/             # 10 extracted images
+│       ├── test/
+│       │   └── CHAPALA/          # 61 extracted images
+│       ├── normalized/
+│       │   ├── train/
+│       │   ├── validation/
+│       │   └── test/
+│       └── stacked/
+│           ├── train/
+│           ├── validation/
+│           ├── test/
+│           └── image_labels.csv
