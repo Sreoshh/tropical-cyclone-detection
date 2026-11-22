@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+## Project Notebook Structure
+
+The project is organized into three Jupyter notebooks, each covering a distinct stage of data exploration and development.
+
+| Notebook | Purpose |
+|---|---|
+| `01_data_exploration.ipynb` | General dataset exploration and initial data analysis |
+| `02_satellite_image_exploration.ipynb` | Satellite imagery exploration and visual analysis |
+| `03_hursat_data_inspection.ipynb` | HURSAT-specific data inspection, preprocessing, dataset preparation, and cyclone pattern classification |
+
+**Development Note:** Each notebook follows a dedicated workflow. Project milestones and completed developments are documented separately in the versioned changelog below.
+
+
 ## [0.1.0] 
 
 ### Added
@@ -110,7 +123,7 @@
 
 
 
-### v0.3.0 —  Phase 2: Dataset Preparation 
+### [v0.3.0] —  Phase 2: Dataset Preparation 
 
 **Added**
 - Extracted IRWIN, IRWVP, and VSCHN satellite channels from MEGH and CHAPALA HURSAT observations.
@@ -123,7 +136,7 @@
 
 
 
-### v0.3.1 — Dataset Preparation and Image-Level Labelling (Phase 3)
+### [v0.3.1] — Dataset Preparation and Image-Level Labelling (Phase 3)
 
 **Added**
 - Extracted IRWIN, IRWVP, and VSCHN satellite channels from HURSAT NetCDF observations.
@@ -167,3 +180,21 @@ data/
 │           ├── validation/
 │           ├── test/
 │           └── image_labels.csv
+
+
+### [v0.3.2] —  Initial CNN implementation
+**Added**
+- Implemented the initial CNN-based wind-speed regression workflow in Ubuntu WSL.
+- Loaded normalized three-channel HURSAT satellite imagery.
+- Prepared training, validation, and independent test datasets.
+- Trained and evaluated the CNN regression model.
+- Added MAE, MSE, RMSE, and R² evaluation.
+- Added mean-baseline comparison.
+- Saved the trained model, metrics, test predictions, and evaluation plot.
+- Integrated the regression workflow and its findings into the original HURSAT inspection notebook.
+
+**Notes**
+- TensorFlow development was performed in Ubuntu WSL because of a DLL loading restriction in the Windows environment.
+- The initial CNN did not outperform the mean baseline on independent test data.
+- Further model improvements may be explored later.
+- Phase 4: Dataset Loading and Class Distribution Analysis remains in progress.
